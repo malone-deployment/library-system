@@ -49,11 +49,11 @@ env:
   WORKLOAD_IDENTITY_PROVIDER: ${{ secrets.WORKLOAD_IDENTITY_PROVIDER }} # Workload Identity Provider
   GAR_REPOSITORY_NAME: ${{ secrets.GAR_REPOSITORY_NAME }} # Artifact Registry repository name: sample: second-repository
 
-  BACKEND_IMAGE: 'my-journal-backend-image' # backend image name
-  WEB_IMAGE: 'my-journal-image' # web image name
+  BACKEND_IMAGE: 'library-system-backend-image' # backend image name
+  WEB_IMAGE: 'library-system-image' # web image name
 
-  BACKEND_SERVICE: 'my-journal-backend-service' # Cloud Run service name
-  WEB_SERVICE: 'my-journal-web-service' # Cloud Run service name
+  BACKEND_SERVICE: 'library-system-backend-service' # Cloud Run service name
+  WEB_SERVICE: 'library-system-web-service' # Cloud Run service name
 
   POSTGRES_CLOUDSQL_INSTANCE: ${{ secrets.POSTGRES_CLOUDSQL_INSTANCE }}
   POSTGRES_INSTANCE_UNIX_SOCKET: ${{ secrets.POSTGRES_INSTANCE_UNIX_SOCKET }}
