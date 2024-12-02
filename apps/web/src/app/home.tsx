@@ -26,14 +26,16 @@ export function Home() {
   }, []);
 
   const getList = async () => {
-    const baseUrl = 'http://localhost:3000/api/';
+    const baseUrl =
+      'https://library-system-backend-service-422041495987.asia-southeast1.run.app/api/';
     const response = await fetch(`${baseUrl}lbs`);
     const result = await response.json();
     setlbsList(result);
   };
 
   const onSubmit: SubmitHandler<IFormInputs> = async (data) => {
-    const baseUrl = 'http://localhost:3000/api/';
+    const baseUrl =
+      'https://library-system-backend-service-422041495987.asia-southeast1.run.app/api/';
     const response = await fetch(`${baseUrl}lbs`, {
       method: 'POST',
       headers: {
@@ -54,7 +56,8 @@ export function Home() {
 
   async function deleteButton(id: string) {
     alert('are you sure you want to delete this item?');
-    const baseUrl = 'http://localhost:3000/api/';
+    const baseUrl =
+      'https://library-system-backend-service-422041495987.asia-southeast1.run.app/api/';
     try {
       const response = await fetch(`${baseUrl}lbs?id=${id}`, {
         method: 'DELETE',
@@ -83,7 +86,8 @@ export function Home() {
       statusButton: statusButton,
     };
 
-    const baseUrl = 'http://localhost:3000/api/';
+    const baseUrl =
+      'https://library-system-backend-service-422041495987.asia-southeast1.run.app/api/';
     const response = await fetch(`${baseUrl}lbs?id=${id}`, {
       method: 'PATCH',
       headers: {
