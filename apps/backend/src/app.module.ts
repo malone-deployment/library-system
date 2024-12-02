@@ -7,11 +7,11 @@ import { LBSEntity } from './tools/lbs.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: '172.19.16.1',
-      port: 5432,
-      username: 'file',
-      password: 'file',
-      database: 'file',
+      host: process.env.POSTGRES_INSTANCE_UNIX_SOCKET, // Cloud SQL instance connection
+      port: parseInt(process.env.POSTGRES_DB_PORT, 10),
+      username: process.env.POSTGRES_DB_USER,
+      password: process.env.POSTGRES_DB_PASS,
+      database: process.env.POSTGRES_DB_NAME,
       entities: [LBSEntity],
       synchronize: true,
     }),
